@@ -1,0 +1,344 @@
+header {
+    display: flex;
+}
+
+.logo-img{
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 12rem;
+    text-align: center;
+    align-items: end;
+    background: none;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100vw;
+    height: 70px;
+    z-index: 20;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 0 40px;
+    background-color: #0000003b;
+    transition: background-color 2s;
+}
+
+.links{
+    display: flex;
+    gap: 1rem; 
+    padding: 0 40px;
+    background-color: transparent;
+    transition: background-color 2s;
+}
+
+.bi-telephone{
+    background-color: transparent;
+}
+
+.links a {
+    text-decoration: none;
+    background: none;
+    padding: 1rem;
+    color: var(--cor-branco);
+    transition: all 0.2s;;
+}
+
+.links a:hover {
+    transform: translateY(-3px);
+}
+
+#home{
+    background-color: var(--cor-blackEscuro);
+    height: 100vh;
+    padding: 5px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-area: "left", "right";
+}
+
+.home-left{
+    margin-top: 5rem;
+    grid-area: "left";
+}
+
+.false-btn{
+    display: flex;
+    height: fit-content;
+    width: fit-content;
+    padding: 0.3rem 0.8rem;
+    align-items: center;
+    gap: 0.3rem;
+    background-color: var(--cor-blackClaro);
+    border-radius: 13rem;
+    margin: 1.5rem 0 0 3rem;
+}
+
+.false-btn img{
+    background: radial-gradient(circle, #413e3e, #413e3e,#b0f432);
+    border-radius: 50%;
+    padding: 0.3rem;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.false-btn p{
+    font-size: 16px;
+    background-color: var(--cor-blackClaro);
+}
+
+.title-home{
+    font-family: 'Oswald';
+    font-size: 1.5rem;
+    margin: 0.5rem 2.5rem;
+    padding: 0.3rem 0.8rem;
+}
+
+.subtitle-home, .playlist-btn, .gym-datas{
+    margin: 0.5rem 2.5rem;
+    padding: 0.3rem 0.8rem;
+}
+
+.subtitle-home span{
+    color: var(--cor-neon);
+}
+
+.playlist-btn{
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.contact-us {
+    font-size: 1rem;
+    font-family: "Roboto";
+    background-color: var(--cor-branco);
+    border: none;
+    cursor: pointer;
+    font-weight: bold; 
+    color: var(--cor-blackClaro); 
+    padding: 0.8rem;
+    border-radius: 1rem;
+    transition: all 0.2s;
+}
+
+.contact-us:hover{
+    transform: translateY(-3px);
+    background-color: #dadada;
+}
+
+.contact-us .bi-whatsapp{
+    color: #0c790c;
+    font-weight: bold;
+    background: none;
+}
+
+.spotify-wrapper {
+    display: inline-block; 
+    vertical-align: top; 
+    margin-left: 1rem;
+}
+
+.spotify{
+    display: flex;
+    align-items: center;
+    margin-left: 0.8rem;
+    padding: 0.3rem;
+    border: none;
+    cursor: pointer;
+    color: var(--cor-branco);
+}
+
+.bi-spotify{
+    margin-right: 0.5rem;
+    font-size: 1.8rem;
+    color: var(--cor-neon);
+    background: none;
+}
+
+.spotify:hover{
+    background-color: #585858;
+    border-radius: 1rem;
+}
+
+
+.gym-datas{
+    display: flex;
+    margin-top: 3.5rem;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.gym-datas div{
+    display: flex;
+    align-items: center;
+}
+
+.data{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.number{
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: "Oswald";
+}
+
+.traco{
+    height: 1em; 
+    border-left: 1px solid var(--cor-neon); 
+    margin: 0 8px;
+}
+
+
+.home-right {
+    position: relative;
+    grid-area: "right";
+}
+.images-home {
+    position: relative;
+}
+.images-home img {
+    position: absolute;
+}
+
+.blur-neon{
+    position: absolute;
+    width: 20rem;
+    z-index: 0;
+    height: 50vh;
+    margin-top: 4rem;
+    right: 0;
+}
+
+@keyframes animarFumaca {
+    0% {
+        filter: brightness(100%);
+        transform: scale(1);
+    }
+    50% {
+        filter: brightness(150%);
+        transform: scale(1.2);
+    }
+    100% {
+        filter: brightness(100%);
+        transform: scale(1);
+    }
+}
+
+@keyframes animarFumaca2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(0, -60px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+
+  @keyframes animarMen {
+        0% {
+          transform: translate(0, 0);
+        }
+        50% {
+          transform: translate(-20px, 0);
+        }
+        100% {
+          transform: translate(0, 0);
+        }
+    }
+
+.fumaca1 {
+    background-color: transparent;
+    margin-top: 3.5rem;
+    height: 100vh;
+    animation: animarFumaca 60s ease-in-out infinite;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.fumaca2{
+    margin-top: 14rem;
+    right: 0;
+    height: 90vh; 
+    width: auto;
+    animation: animarFumaca2 60s ease-in-out infinite;
+    overflow: hidden;
+    z-index: 3;     
+    
+}
+
+.men-home{
+    margin-top: 5rem;
+    margin-left: 2rem;
+    width: 48rem;
+    height: auto;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    overflow: hidden;
+    animation: animarMen 60s infinite linear;
+}
+
+.divisor-home{
+    z-index: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background: linear-gradient(#2b2b2b, #2b2b2b, #3b3d41);
+    width: 100vw;
+    height: 4rem;
+}
+
+.container-divisoria{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seta-divisoria{
+    height: fit-content;
+    width: fit-content;
+    background-color: var(--cor-blackClaro);
+    border-radius: 13rem;
+    background: radial-gradient(circle, #413e3e, #413e3e,#b0f432);
+    border-radius: 50%;
+    padding: 0.3rem;
+    width: 1.9rem;
+    height: 1.9rem;
+    animation: moverSeta 2s infinite;
+}
+
+
+@keyframes moverSeta {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.hidden {
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+
+

@@ -1,0 +1,133 @@
+#activities{
+    position: relative;
+    background-color: var(--cor-blackClaro);
+    padding: 5px;
+}
+
+.title-activities h1,
+.title-activities h2,
+.title-activities p {
+    text-align: center;
+}
+
+.title-activities h1,
+.title-activities h2{
+    font-family: 'Oswald';
+    margin-bottom: 1rem;
+}
+
+
+.title-activities{
+    margin-top: 2.5rem;
+}
+
+.title-activities h2{
+   color: var(--cor-neon);
+   font-size: 2rem;
+}
+
+.container-options{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.activities-options{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0.5rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    grid-template-areas:
+    "musculacao crossfit natacao"
+    "boxe pilates danca"
+}
+
+.option-musculacao{
+    grid-area: musculacao;
+}
+
+.option-crossfit{
+    grid-area: crossfit;
+}
+
+.option-natacao{
+    grid-area: boxe;
+}
+
+.option-pilates{
+    grid-area: pilates;
+}
+
+.option-danca{
+    grid-area: danca;
+}
+
+.option{
+    display: flex;
+    flex-direction: column;
+    border: 1px  solid var(--cor-neon) ;
+    border-radius: 8px;
+    width: 18rem;
+    height: 25rem;
+    z-index: 2;
+}
+
+.option:hover{
+    background-color: var(--cor-cinzaClaro);
+    transition: opacity 0.3s ease;
+    transform: translateY(-2px)
+}
+
+.option h2, .option p{
+    margin-top: 0.5rem;
+    text-align: left;
+    margin-left: 0.6rem;
+}
+
+.option a{
+    display: block;
+    text-align: left;
+    margin: auto 0 2rem 0.6rem;
+    padding: 3px;
+    text-decoration: none;
+    color: var(--cor-branco);
+}
+
+.option a:hover{
+    text-decoration: underline;
+}
+
+.bi-arrow-right{
+    color: var(--cor-neon);
+}
+
+.option h2{
+    margin-top: 1rem;
+    font-family: "Oswald";
+    color: var(--cor-neon);
+}
+
+.image-container{
+    display: flex;
+    justify-content: center;
+}
+
+.activities-options img{
+    border-radius: 8px;
+    margin-top: 0.3rem;
+    width: 17rem;
+    height: auto;
+}
+
+.divisor-activities{
+    z-index: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background: linear-gradient(#3b3d41,#3b3d41, #2b2b2b);
+    width: 100vw;
+    height: 4rem;
+}
+

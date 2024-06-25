@@ -1,0 +1,124 @@
+#plans{
+    background-color: var(--cor-blackEscuro);
+    height: 95vh;
+    padding: 5px;
+}
+
+
+.title-plan h2, .title-plan h1{
+    text-align: center;
+    font-family: 'Oswald';
+    margin-bottom: 1rem;
+}
+
+.title-plan{
+    margin-top: 1.5rem;
+}
+
+.title-plan h2{
+    color: var(--cor-neon);
+    font-size: 2rem;
+}
+
+.container-plans{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.plan{
+    text-align: center;
+    background-color: var(--cor-blackClaro);
+    margin-right: 0.8rem;
+    padding: 10px;
+    width: 18rem;
+    height: 22rem;
+}
+
+.description-plan{
+    font-family: "Oswald";
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 32px 0 16px ; 
+} 
+
+.price-plan span{
+    font-family: "Oswald";
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.plan ul{
+    margin-top: 1.8rem;
+    list-style-type: none; 
+}
+
+.plan ul li{
+    font-size: 15px;
+}
+
+.join-btn{
+    margin-top: 2rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: transparent;
+    background-color: var(--cor-branco);
+    font-weight: bold;
+    color: var(--cor-blackEscuro);
+    cursor: pointer;
+}
+
+.premium{
+    position: relative;
+    background-color: var(--cor-neon);
+    color: var(--cor-blackEscuro);
+}
+
+.popular{
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--cor-branco);
+    color: var(--cor-blackEscuro);
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 5px;
+}
+
+.premium .join-btn{
+    background-color: var(--cor-blackEscuro);
+    color: var(--cor-branco);
+}
+
+.bi-fire{
+    color: #fc4d36;
+}
+
+.ball-select {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.ball{
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    border: solid 3px white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.selected-ball{
+    background-color: #fc4d36;
+}
+
+.selected-plan{
+    transition: opacity 0.3s ease;
+    transform: translateY(-8px);
+}
+
+
+
