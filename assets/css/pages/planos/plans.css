@@ -34,6 +34,7 @@
     padding: 10px;
     width: 18rem;
     height: 22rem;
+    cursor: pointer;
 }
 
 .description-plan{
@@ -83,7 +84,7 @@
     background-color: var(--cor-branco);
     color: var(--cor-blackEscuro);
     font-weight: bold;
-    padding: 4px 10px;
+    padding: 8px 10px;
     border-radius: 5px;
 }
 
@@ -96,10 +97,21 @@
     color: #fc4d36;
 }
 
-.ball-select {
+.container-balls{
+    background-color: var(--cor-blackClaro);
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    align-items: center;
+    padding: 5px;
+    width: fit-content;
+    margin: 8px auto;
+    border-radius: 10px;  
+}
+
+.ball-swich {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .ball{
@@ -111,13 +123,23 @@
     cursor: pointer;
 }
 
-.selected-ball{
+.active-ball{
     background-color: #fc4d36;
 }
 
 .selected-plan{
     transition: opacity 0.3s ease;
     transform: translateY(-8px);
+}
+
+.selected-no-premium{
+    background-color: var(--cor-branco);
+    color: var(--cor-blackEscuro);
+}
+
+.selected-no-premium .join-btn{
+    background-color: var(--cor-neon);
+    color: var(--cor-blackEscuro);
 }
 
 
