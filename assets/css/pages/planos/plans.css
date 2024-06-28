@@ -1,6 +1,7 @@
 #plans{
+    position: relative;
     background-color: var(--cor-blackEscuro);
-    height: 95vh;
+    height: 100vh;
     padding: 5px;
 }
 
@@ -142,5 +143,14 @@
     color: var(--cor-blackEscuro);
 }
 
+.divisor-plans{
+    z-index: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background: linear-gradient(#2b2b2b,#2b2b2b,#3b3d41);
+    width: 100vw;
+    height: 4rem;
+}
 
 
