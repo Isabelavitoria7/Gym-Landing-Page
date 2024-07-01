@@ -134,7 +134,7 @@ nav {
 }
 
 .contact-us .bi-whatsapp{
-    color: #0c790c;
+    color: var(--cor-blackEscuro);
     font-weight: bold;
     background: none;
 }
@@ -163,7 +163,7 @@ nav {
 }
 
 .spotify:hover{
-    background-color: #585858;
+    background-color: var(--cor-cinzaClaro);
     border-radius: 1rem;
 }
 

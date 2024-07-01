@@ -6,17 +6,17 @@
 }
 
 
-.title-plan h2, .title-plan h1{
+.title h2, .title h1{
     text-align: center;
     font-family: 'Oswald';
     margin-bottom: 1rem;
 }
 
-.title-plan{
+.title{
     margin-top: 1.5rem;
 }
 
-.title-plan h2{
+.title h2{
     color: var(--cor-neon);
     font-size: 2rem;
 }
