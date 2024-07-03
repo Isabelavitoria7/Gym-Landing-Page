@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <nav>     
+        <nav class="nav-home">     
             <div class="logo-img">
                 <img src="/assets/images/pages/geral/logo.svg" alt="logo" class="logo">
             </div>     
@@ -329,13 +329,13 @@
                         <form>
                             <div class="inputs">
                             <label for="nome">Nome e sobrenome:</label><br>
-                            <input type="text" id="nome" name="nome" placeholder="Seu nome"><br><br>
+                            <input type="text" id="nome" name="nome" placeholder="Seu nome" autocomplete="off"><br><br>
     
                             <label for="telefone">Telefone:</label><br>
-                            <input type="telefone" id="telefone" name="telefone" placeholder="+55 (DDD) 1234-5678"><br><br>
+                            <input type="telefone" id="telefone" name="telefone" placeholder="+55 (DDD) 1234-5678" autocomplete="off"><br><br>
     
                             <label for="mensagem">Mensagem:</label><br>
-                            <textarea id="mensagem" name="mensagem" rows="4" cols="50" placeholder="Fale um pouco sobre sua dúvida..."></textarea><br><br>
+                            <textarea id="mensagem" name="mensagem" rows="4" cols="50" placeholder="Fale um pouco sobre sua dúvida..." autocomplete="off"></textarea><br><br>
     
                             <button type="submit">Enviar <i class="bi bi-send"></i></button>
                             </div>
@@ -343,40 +343,43 @@
                         </form>
                     </div>
             </div>
-        </div>   
+        </div>  
+        <div class="divisor-contact"></div> 
     </section>
 
     <footer>
-
+        <hr>
         <div class="container-footer">
-            <div>
-                <img src="/assets/images/pages/geral/logo.svg" alt="logo">
-                <p>Seu caminho para uma vida mais saudável começa aqui.</p>
-            </div>
-
-            <div class="quick-links">
-                <nav>          
-                    <a href="#home">Home</a>
-                    <a href="#activities">Atividades</a>
-                    <a href="#plans">Planos</a>
-                    <a href="#team">Nossa Equipe</a>
-                    <a href="#contact">Contato</a>
-                </nav>
-            </div>
-        </div>
-
-        <div class="socials-footer">
-            <a href="linkparainstagram" target="_blank"><i class="bi bi-instagram"></i></a>
-            <a href="linkparatwitter" target="_blank"><i class="bi bi-twitter-x"></i></a>
-            <a href="linkparafacebook"><i class="bi bi-facebook"></i></a>
-            <a href="linkparalinkedin"><i class="bi bi-linkedin"></i></a>
-        </div>
-
-        <span class="line"></span>
-
-        <p class="copyright">&copy; 2024 - Todos os direitos reservados.</p>
-        <p class="credit">Desenvolvido por <a href="https://github.com/isabelavitoria7" target = "_blank" >@isabelavitoria7<i class="bi bi-balloon-heart"></i></a></p>
+            <div class="container-grid-footer">
+                <div class="footer-left">
+                        <img src="/assets/images/pages/geral/logo.svg" alt="logo" class="logo">
+                        <p>Seu caminho para uma vida mais saudável começa aqui.</p>      
+                </div>
         
+                    <div class="footer-right">
+                        <div class="quick-links">
+                            <h2>Links</h2>
+                            <nav>          
+                                <a href="#home">Home</a>
+                                <a href="#activities">Atividades</a>
+                                <a href="#plans">Planos</a>
+                                <a href="#team">Nossa Equipe</a>
+                                <a href="#contact">Contato</a>
+                            </nav>
+                        </div>
+    
+                        <div class="social-footer">
+                            <p>Siga-nos nas redes socias.</p>
+                            <a href="linkparainstagram" target="_blank"><i class="bi bi-instagram"></i></a>
+                            <a href="linkparatwitter" target="_blank"><i class="bi bi-twitter-x"></i></a>
+                            <a href="linkparafacebook"><i class="bi bi-facebook"></i></a>
+                            <a href="linkparalinkedin"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>                                 
+            </div>
+        </div>
+            
+        <p class="copyright">&copy; 2024 - Todos os direitos reservados - Desenvolvido por <a href="https://github.com/isabelavitoria7" target = "_blank" >Isabela Branco</a></p>    
     </footer>
 </body>
 </html>

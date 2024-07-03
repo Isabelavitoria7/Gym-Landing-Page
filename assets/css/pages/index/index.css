@@ -4,6 +4,7 @@
 @import "/assets/css/pages/home/home.css";
 @import "/assets/css/pages/planos/plans.css";
 @import "/assets/css/global/global.css";
+@import "/assets/css/pages/footer/footer.css";
 
 * {
    padding: 0;
