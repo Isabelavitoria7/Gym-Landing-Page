@@ -4,6 +4,7 @@ header {
 
 .logo-img{
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -14,12 +15,12 @@ header {
     background: none;
 }
 
-nav {
+.nav-home {
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: fixed;
-    width: 100vw;
+    width: 100%;
     height: 70px;
     z-index: 20;
     backdrop-filter: blur(20px);
@@ -37,6 +38,8 @@ nav {
     transition: background-color 2s;
 }
 
+
+
 .bi-telephone{
     background-color: transparent;
 }
@@ -46,38 +49,84 @@ nav {
     background: none;
     padding: 1rem;
     color: var(--cor-branco);
-    transition: all 0.2s;;
+    transition: all 0.2s;
 }
 
 .links a:hover {
     transform: translateY(-3px);
 }
 
+/* menu-hamburguer */
+
+.hamburguer{
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 35px;
+    height: 18px;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.traco-h{
+    background-color: var(--cor-branco);
+    width: 100%;
+    height: 2px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.hamburguer.active .traco-h:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburguer.active .traco-h:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburguer.active .traco-h:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
 #home{
+    position: relative;
     background-color: var(--cor-blackEscuro);
     height: 100vh;
+    width: 100vw;
+    max-height: 720px;
     padding: 5px;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.container-home{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-area: "left", "right";
+    grid-template-rows: repeat(1, 1fr);
+    gap: 1rem;
+    grid-area: "left right";
 }
 
 .home-left{
-    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-top: 15%;
+    margin-left: 7%;
     grid-area: "left";
+    max-width: 100%;
 }
 
 .false-btn{
     display: flex;
     height: fit-content;
     width: fit-content;
-    padding: 0.3rem 0.8rem;
+    padding: 0.3rem 0.5rem;
     align-items: center;
     gap: 0.3rem;
     background-color: var(--cor-blackClaro);
     border-radius: 13rem;
-    margin: 1.5rem 0 0 3rem;
 }
 
 .false-btn img{
@@ -96,13 +145,11 @@ nav {
 .title-home{
     font-family: 'Oswald';
     font-size: 1.5rem;
-    margin: 0.5rem 2.5rem;
-    padding: 0.3rem 0.8rem;
+    margin-top: 2rem;
 }
 
 .subtitle-home, .playlist-btn, .gym-datas{
-    margin: 0.5rem 2.5rem;
-    padding: 0.3rem 0.8rem;
+    margin-top: 2rem;
 }
 
 .subtitle-home span{
@@ -113,6 +160,7 @@ nav {
     display: flex;
     align-items: center;
     margin-top: 1.5rem;
+    gap: 12%;
 }
 
 .contact-us {
@@ -148,12 +196,13 @@ nav {
 .spotify{
     display: flex;
     align-items: center;
-    margin-left: 0.8rem;
+    text-align: center;
     padding: 0.3rem;
     border: none;
     cursor: pointer;
     color: var(--cor-branco);
 }
+
 
 .bi-spotify{
     margin-right: 0.5rem;
@@ -172,7 +221,7 @@ nav {
     display: flex;
     margin-top: 3.5rem;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     gap: 1rem;
 }
 
@@ -185,6 +234,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .number{
@@ -199,13 +249,15 @@ nav {
     margin: 0 8px;
 }
 
-
 .home-right {
     position: relative;
+    justify-content: right;
+    bottom: 0;
     grid-area: "right";
 }
 .images-home {
     position: relative;
+    bottom: 0;
 }
 .images-home img {
     position: absolute;
@@ -237,23 +289,37 @@ nav {
 
 @keyframes animarFumaca2 {
     0% {
-      transform: translate(0, 0);
+      transform: translate(0, 0px);
     }
     50% {
       transform: translate(0, -60px);
     }
     100% {
-      transform: translate(0, 0);
+      transform: translate(0, 0px);
+    }
+  }
+@keyframes animarFumacaDuplicate {
+    0% {
+        transform: translate(40px, -135px);
+    }
+    25% {
+        transform: translate(45px, -120px);
+    }
+    50% {
+      transform: translate(45px, -120px);
+    }
+    100% {
+      transform: translate(40px, -135px);
     }
   }
 
 
   @keyframes animarMen {
         0% {
-          transform: translate(0, 0);
+          transform: translate(-5px, 0);
         }
         50% {
-          transform: translate(-20px, 0);
+          transform: translate(-28px, 0);
         }
         100% {
           transform: translate(0, 0);
@@ -263,8 +329,11 @@ nav {
 .fumaca1 {
     background-color: transparent;
     margin-top: 3.5rem;
-    height: 100vh;
-    animation: animarFumaca 60s ease-in-out infinite;
+    max-width: 60vw; 
+    height: auto;
+    min-height: 50vh;
+    right: 0;
+    animation: animarFumaca 58s ease-in-out infinite;
     overflow: hidden;
     z-index: 1;
 }
@@ -272,34 +341,26 @@ nav {
 .fumaca2{
     margin-top: 14rem;
     right: 0;
-    height: 90vh; 
-    width: auto;
-    animation: animarFumaca2 60s ease-in-out infinite;
+    max-width: 60vw; 
+    height: auto;
+    min-height: 80vh;
+    animation: animarFumaca2 50s ease-in-out infinite;
     overflow: hidden;
     z-index: 3;     
-    
+}
+
+.fumaca-duplicate{
+    display: none;
 }
 
 .men-home{
     margin-top: 5rem;
     margin-left: 2rem;
     width: 48rem;
-    height: auto;
     top: 0;
-    left: 0;
     z-index: 2;
     overflow: hidden;
-    animation: animarMen 60s infinite linear;
-}
-
-.divisor-home{
-    z-index: 0;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    background: linear-gradient(#2b2b2b, #2b2b2b, #3b3d41);
-    width: 100vw;
-    height: 4rem;
+    animation: animarMen 54s infinite linear;
 }
 
 .container-divisoria{
@@ -309,6 +370,7 @@ nav {
 }
 
 .seta-divisoria{
+    position: absolute;
     height: fit-content;
     width: fit-content;
     background-color: var(--cor-blackClaro);
@@ -340,5 +402,128 @@ nav {
     transition: opacity 0.5s;
 }
 
+.divisor-home{
+    z-index: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background: linear-gradient(#2b2b2b, #2b2b2b, #3b3d41);
+    width: 100%;
+    height: 4rem;
+}
+
+
+@media screen and (max-width: 768px){
+    .logo{
+        width: 8rem;
+    }
+
+    .links{
+        display: none;
+        flex-direction: column;
+        background-color: var(--cor-blackClaro);
+        position: absolute;
+        top: 100%;
+        right: 0;
+    }
+
+    .hamburguer{
+        display: flex;
+    }
+
+    #home{
+        max-height: 100vh;
+    }
+
+    .home-left{
+        margin-left: 0;
+    }
+
+    .container-home{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+    }
+
+    .false-btn, .title-home, .subtitle-home, .playlist-btn, .gym-datas{
+        margin-top: 5%;
+        align-self: center;
+    }
+
+    .false-btn{
+        margin-top: 5%;
+    }
+
+    .subtitle-home p{
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .playlist-btn{
+        width: 90%;
+    }
+
+    .contact-us{
+       padding: 0.3rem;
+    }
+
+    .gym-datas{
+        margin-top: 1rem;
+    }
+
+    .gym-datas div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-items: center;
+    }
+
+    .traco{
+        height: 0.5em; 
+    }
+
+    .men-home{
+        width: auto;
+        height: 50vh;
+        margin-top: 0;
+        margin-left: calc(8vw);
+        animation: none;
+        z-index: 4;
+    }
+
+    .blur-neon{
+        transform: rotate(180deg);
+        transform: scaleY(-1);
+        z-index: 8;
+    }
+
+    .fumaca1{
+        display: none;
+    }
+
+    .fumaca2{
+        min-height: 40vh;
+        max-width: 100%;
+        margin-top: 10rem;
+        animation: animarFumaca2 50s ease-in-out infinite;
+    }
+
+    .fumaca-duplicate{
+        height: 50vh;
+        z-index: 5;
+        opacity: 80%;
+        display: flex;
+        animation: animarFumacaDuplicate 20s ease-in-out infinite;
+    }
+
+    .seta-divisoria{
+        margin-right: 80%;
+    }
+
+
+
+}
 
 

@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEW FITNESS</title>  
-    <link rel="icon" href="/assets/images/pages/geral/raio.svg">
+    <link rel="icon" href="assets/images/geral/raio.svg">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="/assets/css/pages/index/index.css">
-    <script src="assets/js/pages/index/index.js" defer></script>
+    <link rel="stylesheet" href="assets/css/pages/index.css">
+    <script src="assets/js/index/index.js" defer></script>
 </head>
 <body>
     <header>
         <nav class="nav-home">     
             <div class="logo-img">
-                <img src="/assets/images/pages/geral/logo.svg" alt="logo" class="logo">
+                <img src="assets/images/geral/logo.svg" alt="logo" class="logo">
             </div>     
             
             <div class="links">
@@ -23,6 +23,12 @@
                 <a href="#team">Nossa Equipe</a>
                 <a href="#contact"><i class="bi bi-telephone"></i> Contato</a>
             </div>  
+
+            <div class="hamburguer" onclick="this.classList.toggle('active')">
+                <span class="traco-h"></span>
+                <span class="traco-h"></span>
+                <span class="traco-h"></span>
+            </div>
         </nav>
     </header>
 
@@ -30,7 +36,7 @@
         <div class="container-home">
             <div class="home-left">
                 <div class="false-btn">
-                    <img src="./assets/images/pages/geral/raio.svg" alt="raio">
+                    <img src="assets/images/geral/raio.svg" alt="raio">
                     <p>O melhor lugar para treinar</p>
                 </div>
                 <div class="title-home">
@@ -42,24 +48,25 @@
                 <div class="playlist-btn">
                     <button class="contact-us"><i class="bi bi-whatsapp"></i> Entre em Contato</button>                
                     <div class="spotify-wrapper">
-                         <div class="spotify"><i class="bi bi-spotify"></i> Acesse nossa playlist!</div>
+                         <div class="spotify"><i class="bi bi-spotify"></i><p>Acesse nossa playlist!</p></div>
                     </div>
                 </div>
     
                 <div class="gym-datas">
-                    <div class="data"><div class="number">+500</div><span class="traco"></span><div class="text"><p>Alunos satisfeitos</p></div></div>
-                    <div class="data"><div class="number">100</div><span class="traco"></span><div class="text"><p>Equipamentos Modernos</p></div></div>
-                    <div class="data"><div class="number">5</div><span class="traco"></span><div class="text"><p>Espaços dinâmicos</p></div></div>
+                    <div class="data"><div class="number">+500</div><span class="traco"></span><p>Alunos satisfeitos</p></div>
+                    <div class="data"><div class="number">100</div><span class="traco"></span><p>Equipamentos Modernos</p></div>
+                    <div class="data"><div class="number">5</div><span class="traco"></span><p>Espaços dinâmicos</p></div>
                 </div>
             </div>
     
         
             <div class="home-right"> 
                 <div class="images-home">
-                    <img src="/assets/images/pages/home/blur-neon.png" alt="" class="blur-neon">
-                    <img src="/assets/images/pages/home/fumaca1.png" alt="fumaca" class="fumaca1">
-                    <img src="/assets/images/pages/home/men.png" alt="men" class="men-home">
-                    <img src="/assets/images/pages/home/fumaca2.png" alt="" class="fumaca2">
+                    <img src="assets/images/home/blur-neon.png" alt="" class="blur-neon">
+                    <img src="assets/images/home/fumaca1.png" alt="fumaca" class="fumaca1">
+                    <img src="assets/images/home/men.png" alt="men" class="men-home" >
+                    <img src="assets/images/home/fumaca2.png" alt="" class="fumaca2">
+                    <img src="assets/images/home/fumaca2.png" alt="" class="fumaca2 fumaca-duplicate">
                 </div>         
             </div>
 
@@ -67,12 +74,12 @@
 
         <div class="divisor-home">
             <div class="container-divisoria">
-                <img src="/assets/images/pages/home/divisoria.svg" alt="" class="seta-divisoria">
+                <img src="assets/images/home/divisoria.svg" alt="" class="seta-divisoria">
             </div>
         </div>
     </section>
 
-    <section class="container-section" id="activities">
+    <!-- <section class="container-section" id="activities">
         <div class="title-activities">
             <h1>NOSSAS ATIVIDADES</h1>
             <h2>EXPERIMENTE O MELHOR DOS NOSSOS ESPAÇOS</h2>
@@ -289,11 +296,11 @@
                 </div>     
                 </div>
             </div>
-            <div class="chevron chevron-left">
-                <i class="bi bi-chevron-left"></i>
-            </div>
-            <div class="chevron chevron-right">
-                <i class="bi bi-chevron-right"></i>
+            <div class="container-chevrons-team">
+                <div class="chevrons-team">
+                    <i class="chevron bi bi-chevron-left"></i>
+                    <i class="chevron bi bi-chevron-right"></i> 
+                </div>
             </div>
         </div>
         <div class="divisor-activities"></div>
@@ -529,6 +536,6 @@
         </div>
             
         <p class="copyright">&copy; 2024 - Todos os direitos reservados - Desenvolvido por <a href="https://github.com/isabelavitoria7" target = "_blank" >Isabela Branco</a></p>    
-    </footer>
+    </footer> -->
 </body>
 </html>

@@ -1,0 +1,26 @@
+/* Global */
+@import "../global/global.css";
+
+@import "./activities.css";
+@import "./contact.css";
+@import "./team.css";
+@import "./home.css";
+@import "./plans.css";
+@import "./footer.css";
+@import "./feedback.css";
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body {
+   width: 100vw;
+   overflow-x: hidden;
+   font-family: 'Roboto';
+   color: var(--cor-branco);
+   user-select: none;
+}
+
+
