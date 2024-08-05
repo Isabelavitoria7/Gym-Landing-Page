@@ -2,6 +2,8 @@
     position: relative;
     background-color: var(--cor-blackClaro);
     padding: 5px;
+    overflow: hidden;
+    max-width: 100%;
 }
 
 .title-activities h1,
@@ -30,6 +32,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    max-width: 100%;
 }
 
 .activities-options{
@@ -39,6 +42,7 @@
     gap: 0.5rem;
     margin-top: 3rem;
     margin-bottom: 2rem;
+    max-width: 100%;
     grid-template-areas:
     "musculacao crossfit natacao"
     "boxe pilates danca"
@@ -72,6 +76,7 @@
     width: 18rem;
     height: 25rem;
     z-index: 2;
+    max-width: 100%;
 }
 
 .option:hover{
@@ -89,7 +94,7 @@
 .option a{
     display: block;
     text-align: left;
-    margin: auto 0 2rem 0.6rem;
+    margin: auto 0 1rem 0.5rem;
     padding: 3px;
     text-decoration: none;
     color: var(--cor-branco);
@@ -112,13 +117,15 @@
 .image-container{
     display: flex;
     justify-content: center;
+    max-width: 100%;
 }
 
 .activities-options img{
     border-radius: 8px;
     margin-top: 0.3rem;
-    width: 17rem;
+    width: 96%;
     height: auto;
+    max-width: 100%;
 }
 
 .divisor-activities{
@@ -131,3 +138,36 @@
     height: 4rem;
 }
 
+
+@media screen and (max-width: 768px){
+    .title-activities{
+        margin-top: 2rem;
+    }
+
+    .title-activities h1{
+        font-family: 'Oswald';
+        margin-bottom: 0.5rem;
+        color: var(--cor-neon);
+    }       
+
+    .title-activities h2{
+        display: none;
+    }
+
+    .activities-options{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 0.5rem;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        grid-template-areas:
+        "musculacao crossfit"
+        "nataco boxe"
+        "pilates danca"
+    }
+
+    .option{
+        width: 100%;
+        height: auto;
+    }
+}
