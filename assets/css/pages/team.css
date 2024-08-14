@@ -14,7 +14,7 @@
 
 .personal-carousel {
     display: flex;
-    transition: transform 0.8s ease-in-out;
+    transition: transform 0.4s ease-in-out;
 }
 
 .personal{
@@ -27,34 +27,22 @@
     position: relative;
 }
 
-.bi-chevron-right, .bi-chevron-left{
-    font-size: 1.5rem;
+/* estilo das chevrons = chevronsfeedback */
+
+.container-carousel .container-chevrons .chevrons i:not(:last-child){
+    margin-left: 3rem;
 }
 
-.chevron-right, .chevron-left{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.container-carousel .container-chevrons .chevron{
     background-color: var(--cor-blackEscuro);
-    top: 80%;
-    border-radius: 50%;
-    width: 3rem;
-    height: 3rem;
-    cursor: pointer;
+    
 }
 
-.chevron-left{
-    left: 9rem;
-}
-
-.chevron-right{
-    right: 46.5rem;
-}
-
-.chevron-right:hover, .chevron-left:hover{
-    background-color: var(--cor-cinzaClaro);
-    transform: translateY(-1px)
+.container-carousel .container-chevrons{
+    width: fit-content;
+    left: 50%; /* Posiciona o centro da div na metade do container pai */
+    transform: translateX(-70%);
+    bottom: 20%;
 }
 
 .function-description{
