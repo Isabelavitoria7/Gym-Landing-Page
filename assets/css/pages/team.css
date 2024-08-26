@@ -1,7 +1,7 @@
 #team{
     position: relative;
     background-color: var(--cor-blackClaro);
-    height: 90vh;
+    height: 90dvh;
     padding: 5px;
     width: 100%;
     overflow: hidden;

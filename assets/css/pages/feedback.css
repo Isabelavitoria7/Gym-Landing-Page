@@ -1,7 +1,7 @@
 #feedbacks{
     position: relative;
     background-color: var(--cor-blackClaro);
-    height: 95vh;
+    height: 95dvh;
     max-height: 720px;
     padding: 5px;
     display: flex;
