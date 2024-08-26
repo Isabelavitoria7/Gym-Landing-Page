@@ -18,6 +18,13 @@ function adjustMenuDisplay() {
     }
 }
 
+window.addEventListener('scroll', function() {
+    if (menuHamburguer.classList.contains('active')) {
+        menuHamburguer.classList.remove('active');
+        showLinks.style.display = 'none';
+    }
+});
+
 window.addEventListener('resize', adjustMenuDisplay);
 
 document.addEventListener('scroll', function() {
