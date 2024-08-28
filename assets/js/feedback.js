@@ -1,9 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
     const carousel = document.querySelector('.carousel-cards');
     const chevrons = document.querySelectorAll('.chevron-f');
-    const totalItems = document.querySelectorAll('.card').length/2;
     const balls = document.querySelectorAll('.feedback-ball')
     let currentIndex = 0;
+
+
+    let totalItems = window.innerWidth > 930 ? document.querySelectorAll('.card').length / 2 : document.querySelectorAll('.card').length;
 
     function updateCarousel() {
         carousel.style.transform = `translateX(${-(currentIndex * 100)}%)`;

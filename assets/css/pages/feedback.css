@@ -5,8 +5,11 @@
     max-height: 720px;
     padding: 5px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    overflow: hidden;
 }
 
 .fogo-feedback{
@@ -19,9 +22,10 @@
 }
 
 .fogo-img{
-    max-width: 60%;
+    position: absolute;
+    bottom: 0;
+    max-width: 100%;
     transform: scaleX(-1);
-    width: 100%; 
     height: 100%; 
     opacity: 85%;
 }
@@ -62,7 +66,8 @@
 .title-content{
     display: flex;
     flex-direction: column;
-    max-width: 70%;
+    max-width: 100%;
+    margin-left: 15%;
 }
 
 .title-content h2{
@@ -75,11 +80,11 @@
 /* carrossel */
 
 .container-cards{
+    position: relative;
     grid-area: "container-cards";
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
 }
 
 .card-carousel{
@@ -167,10 +172,13 @@
     justify-content: center;
     width: fit-content;
     height: fit-content;
-    bottom: 3%;
-    left: 32%;
-    gap: 2rem;
+    bottom: 1rem;
+    gap: 13rem;
+}
 
+.container-feedback .container-chevrons{
+    width: 100%;
+    margin-left: 17%;
 }
 
 .chevrons{
@@ -216,3 +224,83 @@
     height: 2rem;
 }
 
+.title-mobile{
+    display: none;
+}
+
+.ball-mobile{
+    display: none;
+}
+
+
+@media screen and (max-width: 930px){
+
+
+    .fogo-img{
+        width: 100%;
+        height: 40%;
+    }
+
+    .container-feedback{
+        width: 95%;
+        gap: 0;
+        grid-template-columns: 1.3fr 2fr;
+    }
+
+    .quote{
+        width: 5rem;
+        height: 5rem;
+        top: -3rem;
+        left: 6%;
+    }
+
+    .title-content{
+        max-width: 100%;
+        margin-left: 7%;
+    }
+
+    .title-content h2{
+        display: none;
+    }
+
+    .title-mobile{
+        display: block;
+        margin-bottom: 5rem;
+        text-align: center;
+        font-family: 'Oswald';
+        color: var(--cor-neon);
+    }
+
+    .card-carousel{
+        left: 8%;
+    }
+
+    .card{
+        min-width: 98%;
+    }
+
+    .content-feedback{
+        margin-bottom: 40%;
+    }
+
+    .container-feedback .container-chevrons{
+        margin-left: 0;
+        gap: 5rem;
+    }
+
+    .container-feedback .container-chevrons .chevrons{
+        margin-bottom: 20%;
+    }
+
+    .container-feedback .container-chevrons .container-balls-feedback{
+        margin-top: 20%;
+    }
+
+    .stars{
+        margin-left: 5%;
+    }
+
+    .ball-mobile{
+        display: flex;
+    }
+}
