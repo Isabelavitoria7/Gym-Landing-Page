@@ -25,6 +25,16 @@ window.addEventListener('scroll', function() {
     }
 });
 
+// Fecha o menu se o usuário clicar fora dele
+document.addEventListener('click', function(event) {
+    if (!menuHamburguer.contains(event.target) && !showLinks.contains(event.target)) {
+        if (menuHamburguer.classList.contains('active')) {
+            menuHamburguer.classList.remove('active');
+            showLinks.style.display = 'none';
+        }
+    }
+});
+
 window.addEventListener('resize', adjustMenuDisplay);
 
 document.addEventListener('scroll', function() {

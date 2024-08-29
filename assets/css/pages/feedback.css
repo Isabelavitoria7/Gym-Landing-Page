@@ -213,6 +213,9 @@
     border-radius: 10px;  
 }
 
+.active-ball-f{
+    background-color: #fc4d36;     
+}
 
 .divisor-feedback{
     z-index: 0;

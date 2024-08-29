@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function updateBall(){
-        balls.forEach(ball => ball.classList.remove('active-ball'));
-        balls[currentIndex].classList.add('active-ball');
+        balls.forEach(ball => ball.classList.remove('active-ball-f'));
+        balls[currentIndex].classList.add('active-ball-f');
     }
 
     chevrons.forEach(chevron => {
