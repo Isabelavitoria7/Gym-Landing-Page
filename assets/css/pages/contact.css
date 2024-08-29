@@ -1,7 +1,12 @@
 #contact{
     position: relative;
     background-color: var(--cor-blackEscuro);
-    padding: 5px;
+    width: 100%;
+    overflow: hidden;
+}
+
+#contact .title{
+    margin-top: 2rem;
 }
 
 .container-contact{
@@ -13,19 +18,19 @@
 
 .container-grid{
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: 10rem;
     margin-top: 1rem;
     margin-bottom: 2rem;
     grid-template-areas:
     "contact forms"
-    
 }
 
 .contact{
     grid-area: "contact";
     display: flex;
+    justify-content: center;
     background-color: var(--cor-blackEscuro);
 }
 
@@ -75,17 +80,18 @@
 .forms{
     grid-area: "forms";
     display: flex;
+    justify-content: center;
     flex-direction: column;
     background-image: 
     linear-gradient(-320deg, #649909e6, #b0f43200 30%),
     linear-gradient(-140deg, #649909e6, #b0f43200 30%);
     border-radius: 20px;
-    padding-left: 5px;
+    padding: 20px;
 }
+
 
 .forms h2{
     margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
 }
 
 form{
@@ -109,6 +115,7 @@ input, textarea{
     padding: 5px;
     background-color: var(--cor-blackEscuro);
     color: var(--cor-branco);
+    width: 100%;
 }
 
 form button{
@@ -126,6 +133,34 @@ form button{
 form button:hover{
     transform: translateY(-2px);
     cursor: pointer;
+}
+
+@media screen and (max-width: 768px){
+
+    .container-contact{
+        flex-direction: column;
+    }
+
+    .container-grid{
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "contact"
+            "forms";
+    }
+
+    .contact .socials{
+        display: none;
+    }
+
+    .forms{
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    
 }
 
 
