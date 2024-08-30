@@ -18,8 +18,8 @@
 
 .container-grid{
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows:repeat(1, 1fr);
     gap: 10rem;
     margin-top: 1rem;
     margin-bottom: 2rem;
@@ -55,6 +55,10 @@
     font-size: 1rem;
 }
 
+.socials{
+    z-index: 6;
+}
+
 .map,.socials h2{
     margin-bottom: 1rem;
 }
@@ -87,6 +91,7 @@
     linear-gradient(-140deg, #649909e6, #b0f43200 30%);
     border-radius: 20px;
     padding: 20px;
+    z-index: 6;
 }
 
 
