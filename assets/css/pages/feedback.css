@@ -2,7 +2,6 @@
     position: relative;
     background-color: var(--cor-blackClaro);
     height: 95dvh;
-    max-height: 720px;
     padding: 5px;
     display: flex;
     flex-direction: column;
@@ -235,6 +234,15 @@
     display: none;
 }
 
+@media screen and (max-height: 600px) {
+    #feedbacks{
+        height: auto;
+    }
+
+    .container-feedback{
+        height: 90vh;
+    }
+}
 
 @media screen and (max-width: 930px){
 

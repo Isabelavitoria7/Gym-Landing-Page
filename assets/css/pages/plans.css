@@ -167,7 +167,15 @@
     height: 4rem;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-height: 600px) {
+    #plans{
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 800px){
+    
+
     .container-plans{
         overflow-x: scroll;
         scroll-snap-type: x mandatory;
